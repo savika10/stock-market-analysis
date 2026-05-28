@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Analysis</title>
+    <!-- general styles -->
+    <link rel="stylesheet" href="./styles.css">
+    <!-- stocks prices container -->
+    <link rel="stylesheet" href="./Stock Price/stockPrice.css">
+    <!-- stock details container -->
+    <link rel="stylesheet" href="./Description/description.css">
+    <!-- stock graph container -->
+    <link rel="stylesheet" href="./Graph/graph.css">
+    <!-- import font awesome icons -->
+    <script src="https://kit.fontawesome.com/08f5a237f3.js" crossorigin="anonymous"></script>
+    <!-- tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'selector',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'sans': ['"Quintessential"', 'serif'],
+                    },
+                },
+            },
+        }
+    </script>
+    <!-- chart.js -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+    <div class="container max-w-[100%] h-[100vh] p-8 bg-[#F8E5EE] dark:bg-[#283044] dark:text-white">
+        <div class="flex items-center justify-between">
+            <h1 class="text-4xl font-bold mb-4">Stock Market Analysis <i class="fa-solid fa-arrow-trend-up"></i></h1>
+            <button id="theme-toggle"
+                class="ml-4 inline-flex items-center px-3 py-2 border border-gray-500 rounded-md text-sm focus:outline-none"
+                aria-label="Toggle theme" title="Toggle theme">
+                <span id="theme-icon" class="text-xl"><i class="fa-solid fa-circle-half-stroke"></i></span>
+            </button>
+        </div>
+        <div class="flex flex-row gap-8">
+            <div class="flex flex-col gap-8">
+                <div class="graph-container bg-[#DA627D] dark:bg-[#82A6B1] p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Stock Graph</h2>
+                    <div id="graph-content" class="space-y-4">
+                        <!-- Stock graph data will be dynamically inserted here -->
+                        <div id="graph-data"> graph data will be inserted here </div>
+                        <div id="graph-buttons" class="flex gap-2 
+                                                        [&>button]:px-4 [&>button]:py-2 
+                                                        [&>button]:bg-[#472836] dark:[&>button]:bg-[#0B3948] 
+                                                        [&>button:hover]:bg-[#472836]/70 dark:[&>button:hover]:bg-[#0B3948]/80 
+                                                        [&>button]:text-white [&>button]:rounded-md">
+                            <button id="1mon">1 Month</button>
+                            <button id="3mon">3 Months</button>
+                            <button id="1yr">1 Year</button>
+                            <button id="3yr">3 Years</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="description-container bg-[#DA627D] dark:bg-[#82A6B1] p-6 rounded-lg">
+                    <h2 class="text-2xl font-bold mb-4">Stock Description</h2>
+                    <div id="description-content" class="space-y-4">
+                        <!-- Stock description data will be dynamically inserted here -->
+                    </div>
+                </div>
+            </div>
+            <div class="stock-price-container bg-[#DA627D] dark:bg-[#82A6B1] p-6 rounded-lg">
+                <h2 class="text-2xl font-bold mb-4">Stock List</h2>
+                <div id="stock-price-content" class="space-y-4">
+                    <!-- Stock price data will be dynamically inserted here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./theme.js"></script>
+    <script src="./Graph/graph.js"></script>
+    <script src="./Description/description.js"></script>
+    <script src="./Stock Price/stockPrice.js"></script>
+
+</body>
+
+</html>
