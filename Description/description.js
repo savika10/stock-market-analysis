@@ -1,14 +1,11 @@
 window.addEventListener('stockSelected', (event) => {
     const { stockName, stockData } = event.detail;
-    console.log(stockData, stockName);
     async function fetchDescription(){
         try {
             const response = await fetch('https://stock-market-api-k9vl.onrender.com/api/profiledata');
             const profileData = await response.json();
             const descriptionContent = document.getElementById('description-content');
-            console.log(profileData.stocksProfileData);
             const stockProfile = Object.entries(profileData.stocksProfileData[0]).find(([key, value]) => key === stockName);
-            console.log(stockProfile);
             if (stockProfile) {
                 descriptionContent.innerHTML = `
                     <h3 class="text-xl font-bold mb-2">${stockName} Profile</h3>

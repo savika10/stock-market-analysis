@@ -5,14 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Market Analysis</title>
-    <!-- general styles -->
-    <link rel="stylesheet" href="./styles.css">
-    <!-- stocks prices container -->
-    <link rel="stylesheet" href="./Stock Price/stockPrice.css">
-    <!-- stock details container -->
-    <link rel="stylesheet" href="./Description/description.css">
-    <!-- stock graph container -->
-    <link rel="stylesheet" href="./Graph/graph.css">
     <!-- import font awesome icons -->
     <script src="https://kit.fontawesome.com/08f5a237f3.js" crossorigin="anonymous"></script>
     <!-- tailwind CSS -->
@@ -34,7 +26,7 @@
 </head>
 
 <body>
-    <div class="container max-w-[100%] h-[100vh] p-8 bg-[#F8E5EE] dark:bg-[#283044] dark:text-white">
+    <div class="container max-w-[100%] max-h-[100%] p-8 bg-[#F8E5EE] dark:bg-[#283044] dark:text-white">
         <div class="flex items-center justify-between">
             <h1 class="text-4xl font-bold mb-4">Stock Market Analysis <i class="fa-solid fa-arrow-trend-up"></i></h1>
             <button id="theme-toggle"
@@ -55,10 +47,10 @@
                                                         [&>button]:bg-[#472836] dark:[&>button]:bg-[#0B3948] 
                                                         [&>button:hover]:bg-[#472836]/70 dark:[&>button:hover]:bg-[#0B3948]/80 
                                                         [&>button]:text-white [&>button]:rounded-md">
-                            <button id="1mon">1 Month</button>
+                            <button id="1mon" class="active-btn ring-2 ring-white">1 Month</button>
                             <button id="3mon">3 Months</button>
                             <button id="1yr">1 Year</button>
-                            <button id="3yr">3 Years</button>
+                            <button id="5yr">5 Years</button>
                         </div>
                     </div>
                 </div>
