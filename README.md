@@ -1,8 +1,8 @@
-# Stock Market Analysis Dashboard 📈
+# Stock Market Analysis Dashboard 
 
 A dynamic, fully responsive, and modular financial dashboard built using **HTML5, Tailwind CSS, Vanilla JavaScript**, and **Chart.js**. The application fetches historical stock records dynamically from a third-party REST API and presents analytical data via interactive line graphs, tabular portfolio lists, and deep-dive stock summaries.
 
-## 🌟 Features
+##  Features
 
 * **Dynamic Interactive Graphing:** Powered by `Chart.js`, rendering historical trends across 4 custom timescales (**1 Month, 3 Months, 1 Year, and 5 Years**).
 * **Real-time Analytics Display:** Instantly computes and showcases the **Peak Value** and **Low Value** achieved over the chosen timeframe.
@@ -13,7 +13,7 @@ A dynamic, fully responsive, and modular financial dashboard built using **HTML5
 
 ---
 
-## 🛠️ Tech Stack & Dependencies
+##  Tech Stack & Dependencies
 
 * **Markup:** HTML5 (Semantic Structure)
 * **Styling:** Tailwind CSS (via CDN utility injection) & Custom Vanilla CSS
@@ -23,7 +23,7 @@ A dynamic, fully responsive, and modular financial dashboard built using **HTML5
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 ├── Description/
